@@ -1,0 +1,22 @@
+Adott egy fájl (a neve legyen a program parancssori paramétere), 
+ami egyszeru számla adatokat tartalmaz. Egy sor a számlaszámot
+(5 szám, kötojel, 5 szám, kötojel, 5 szám), a számlatulajdonos nevét 
+(több keresztnév is elofordulhat), az aktuális egyenleget és az utolsó utalás dátumát és értékét.
+(Az egyes elemek szóközzel vannak elválasztva.) A sorok a számlaszámok alapján rendezettek.
+
+Ezen felül adva van egy “update.txt” nevu fájl, ami a számlák aktuális változásait tartalmazza. 
+A fájl sorai megadják az utalás dátumát, idopontját, a módosított számla számát, tulajdonosát, 
+illetve a módosítás mértékét. Az utalások idopont szerint rendezettek. 
+Egy számla egy fájlon belül többször is szerepelhet és a fájl egy adott napon létrejövo számlára vonatkozó adatot 
+(a létrehozáskor befizetett összeget) is tartalmazhat (olyan számlatulajdonos, számlaszám párost, ami eddig még nem létezett).
+
+A feladat egy olyan fájl elkészítése (a neve mindig legyen “newdata.txt”), ami megadja a módosítás utáni aktuális számlaadatokat, 
+az eredeti leírással megegyezo formában. Felteheto, hogy az utalások helyesek, azaz mindig pozitív érték marad a számlán, 
+illetve az update.txt fájlban lévo módosítások mindig újabbak, mint az eredeti fájlban lévo utolsó módosítás.
+
+További követelmények:
+
+    A bemeneti fájl a program parancssori paramétere legyen.
+    Hiányzó argumentum esetén a program “Missing argument!”,
+    míg nem létezo fájl esetén “Input file does not exists!” hibaüzenetet adjon (de mást ne csináljon).
+    A program Python 2-es verzióval kell megfeleloen muködjön.
