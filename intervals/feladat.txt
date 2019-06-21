@@ -1,0 +1,29 @@
+A feladat egy Adatok elnevezésu osztály elkészítése, amely intervallumokat tárol. 
+Az osztály példányosításakor egy fájlnevet kell megadni és az inicializálás során az objektumpéldány ebbol a fájlból olvassa be 
+az intervallumokat. Ha a fájl nem létezik az inicializálás írja ki a “Input file FÁJLNÉV does not exist!” üzenetet az aktuális fájlnévvel 
+és hozzon létre egy üres adatszerkezetet. Felteheto, hogy a feldolgozandó fájl a következo szerkezetu:
+
+12 23
+21 23
+22 34
+10 200
+
+azaz minden sor pontosan két egész számot tartalmaz, ahol a második nagyobb vagy egyenlo az elsonél.
+
+Az osztályban meg kell valósítani az “__str__” muveletet, hogy a kiírás muködjön az osztályhoz tartozó objektumokra. 
+A kiírás üres szerkezet esetén az “Empty” szöveget, míg például a fenti adatok esetén a
+
+Intervals:
+[12,23]
+[21,23]
+[22,34]
+[10,200]
+
+szöveget írja ki (azaz az “Intervals:” üzenet után minden sorba pontosan egy intervallumot [alsó_index,felso_index] alakban, 
+space-ek nélkül).
+
+Ezen kívül az osztályban meg kell valósítani az “append” muveletet, amely szintén egy fájlnevet vár paraméterül, 
+(amely az inicializálásnál leírtakkal megegyezo szerkezetu), és az abban megadott intervallumokat hozzáveszi az eddigiekhez. Ha a fájl nem létezik itt is “Input file FÁJLNÉV does not exist!” üzenetet adjon a metódus.
+
+Ha egy intervallum többször is megjelenik (pl. ugyanazzal a fájllal többször is végrehajtjuk az append muveletet), 
+akkor ezek az intervallumok a kiírás során is jelenjenek meg többször. A kiírás sorrendje feleljen meg a feldolgozás sorrendjének.
